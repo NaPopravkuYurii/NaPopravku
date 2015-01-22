@@ -2,3 +2,18 @@
 	margin: 0;
 	padding: 0;
 }
+
+body{
+	padding: 20px;
+	font-family: "Open Sans Light", "Open Sans", sans-serif;
+	color: #5b5b5b;
+}
+
+
+.doctors{
+	width: 300px;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+	padding: 15px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi1F2+mYmRiZmDg+H/fyaGP3/+///HAAYsrLx8//////3tKxMTM9P/fyBhZja2/wwMAAEGAOmuEq6FyIW5AAAAAElFTkSuQmCC');
+}

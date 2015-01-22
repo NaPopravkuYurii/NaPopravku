@@ -1,3 +1,3 @@
-<div>
+<div class="doctors">
 	Выбор врача
 </div>
