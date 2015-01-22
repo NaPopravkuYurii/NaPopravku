@@ -3,7 +3,10 @@ class Doctors extends CWidget
 {
 	public function run()
 	{
-		$this->render('doctors');
+		$specialisations = Specialization::model()->findAll();
+		$this->render('doctors', array(
+			'specializations' => $specialisations,
+		));
 	}
 }
 ?>

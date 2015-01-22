@@ -17,3 +17,6 @@ body{
 	padding: 15px;
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi1F2+mYmRiZmDg+H/fyaGP3/+///HAAYsrLx8//////3tKxMTM9P/fyBhZja2/wwMAAEGAOmuEq6FyIW5AAAAAElFTkSuQmCC');
 }
+.doctors label{
+	display: block;
+}
