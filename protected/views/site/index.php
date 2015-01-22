@@ -62,4 +62,6 @@ $this->pageTitle = 'Запись на приём';
 			</tr>
 		<?php endforeach;?>
 	</table>
+<?php else:?>
+	Выберите специальность врача и дату.
 <?php endif;?>

@@ -31,7 +31,7 @@
 		<div style="clear: both;"></div>
 		
 		<footer>
-			Copyright Алексеев Юрий
+			<br>Copyright Алексеев Юрий
 		</footer>
 	</body>
 </html>

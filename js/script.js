@@ -19,7 +19,7 @@ var doctors = {
 			
 			$.getJSON('/site/appointment', {'name':name,'phone':phone,'doctor':doctor,'date':date}, function(json){
 				if (json.id) {
-					f.html(json.message + '<br>' + '<b>Номер Вашей записи: ' + json.id + '</b>').css('color', '#229922');
+					f.html(json.message + '<br>' + '<b>Номер Вашей записи: ' + json.id + '</b>').css({'color':'#229922','border':'1px solid #229922','display':'block','padding':'2px'});
 				}
 			});
 		});

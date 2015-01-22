@@ -20,7 +20,7 @@
 		<?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 		   'name' => 'date_search',
 		   'model' => $specializations,
-		   'attribute' => 'date_search',
+		   'value' => $_GET['date_search'] ? $_GET['date_search'] : date('d.m.Y', time()),
 		   'language' => 'ru',
 		   'options' => array(
 		       'showAnim' => 'fold',

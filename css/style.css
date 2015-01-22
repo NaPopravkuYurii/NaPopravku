@@ -9,10 +9,16 @@ body{
 	color: #5b5b5b;
 }
 
+input, select{
+	padding: 4px;
+	border-radius: 3px;
+	border: 1px solid #777;
+}
 
 .doctors{
 	width: 300px;
-	height: 300px;
+	height: 160px;
+	color: white;
 	border-radius: 3px 3px 3px 3px;
 	padding: 15px;
 	float: left;
@@ -21,6 +27,27 @@ body{
 }
 .doctors label{
 	display: block;
+	margin-bottom: 10px;
+}
+.doctors select{
+	width: 300px;
+}
+.doctors input[type=text]{
+	width: 290px;
+}
+.doctors input[type=submit]{
+	border: 1px solid #ffe35f;
+	border-radius: 1px;
+	width: 100%;
+	height: 53px;
+	background: url(data:image/gif;base64,R0lGODlhAQA1AMQAAP/SAP/MAP/NAP/OAP/PAP/QAP/RAP/GAP/HAP/IAP/JAP/KAP/LAP/AAP/BAP/CAP/DAP/EAP/FAP+6AP+7AP+8AP+9AP++AP+/AP+1AP+2AP+3AP+4AP+5AP///wAAACH5BAEAAB4ALAAAAAABADUAAAUrIAAYRmESxDAIQhAwy6IkCYIckhRBz+M0DczlYrFUKJTJpMPhbJ4aTSYTAgA7);
+	text-transform: uppercase;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: -1px -1px #ebab39;
+	cursor: pointer;
 }
 
 .appointments{

@@ -23,7 +23,7 @@ class SiteController extends CController
 		
 		if (!empty($_GET['specialization']) && !empty($_GET['date_search']))
 		{
-			$doctors = Doctor::model()->with('appointments')->findAllByAttributes(array('id_specialization' => $_GET['specialization']));
+			$doctors = Doctor::model()->findAllByAttributes(array('id_specialization' => $_GET['specialization']));
 			
 			$timestr = strtotime($_GET['date_search']);
 			$date = date('Y-m-d', $timestr);
