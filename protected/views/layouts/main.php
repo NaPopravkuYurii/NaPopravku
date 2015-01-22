@@ -4,6 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	
 	<link href="/css/style.css" type="text/css"  rel="stylesheet" />
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script  type="text/javascript" src="js/script.js"></script>
