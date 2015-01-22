@@ -31,10 +31,28 @@ body{
 	border: 1px solid #999;
 	padding: 7px;
 }
-.appointments .info td{
+.appointments .info td.h{
 	display: none;
+}
+.appointments .info td .row_app .free{
+	color: #22aa22;
+}
+.appointments .info td .row_app .free:hover{
+	color: #22cc22;
+	text-decoration: none;
+}
+.appointments .info td .row_app .nonefree{
+	color: #aa2222;
 }
 
 .appointments .row_app{
 	margin-top: 7px;
+}
+
+.appointments .row_app .app_form{
+	display: none;
+}
+
+.appointments .row_app .app_form table, .appointments .row_app .app_form table td{
+	border: none;
 }

@@ -2,6 +2,7 @@
 class Doctor extends CActiveRecord
 {
 	public $appointment;
+	public $free_count;
 	
 	public function tableName()
 	{

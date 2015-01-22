@@ -23,11 +23,14 @@ class SiteController extends CController
 			foreach ($doctors as $key => $doctor)
 			{
 				$intervals = array();
+				$busy_count = 0;
+				$free_count = 0;
 				$wb = $doctor->work_begin * 60;
 				$we = $doctor->work_end * 60;
 				
 				for ($i = $wb; $i <= $we - $doctor->interval; $i = $i + $doctor->interval)
 				{
+					$free_count++;
 					$intervals[$i]['time'] = date('H:i', $i*60-(3*60*60));
 					$intervals[$i]['free'] = true;
 					if (is_array($app[$doctor->id]))
@@ -39,11 +42,18 @@ class SiteController extends CController
 							$current_i = date('i', $timestr);
 							$hm = $current_h * 60 + $current_i;
 							
-							if ($hm >= $i && $hm < $i + $doctor->interval) $intervals[$i]['free'] = false;
+							if ($hm >= $i && $hm < $i + $doctor->interval)
+							{
+								$busy_count++;
+								$intervals[$i]['free'] = false;
+							}
 						}
 					}
 				}
+				$free_count = $free_count - $busy_count;
+				
 				$doctors[$key]->appointment = $intervals;
+				$doctors[$key]->free_count = $free_count;
 			}
 		}
 		
