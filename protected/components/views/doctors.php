@@ -31,7 +31,7 @@
 		));?>
 	</label>
 	
-	<input type="submit" value="Показать">
+	<input class="show_line" type="submit" value="Показать">
 	
 	<?php $this->endWidget(); ?>
 </div>

@@ -3,6 +3,7 @@ $this->pageTitle = 'Запись на приём';
 ?>
 
 <?php if ($doctors):?>
+	<h2><?php echo htmlspecialchars($_REQUEST['date_search'])?></h2>
 	<table class="appointments">
 		<tr>
 			<th>Имя врача</th>
