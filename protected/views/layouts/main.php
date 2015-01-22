@@ -28,6 +28,8 @@
 			<?php echo $content?>
 		</article>
 		
+		<div style="clear: both;"></div>
+		
 		<footer>
 			Copyright Алексеев Юрий
 		</footer>

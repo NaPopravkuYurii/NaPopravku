@@ -2,36 +2,36 @@
 
 	<?php $form = $this->beginWidget('CActiveForm', array(
 		'id'=>'search-form',
-		'enableClientValidation'=>false,
-		'clientOptions'=>array(
-			'validateOnSubmit'=>false,
-		),
+		'method' => 'GET',
 	));?>
 	
 	<label>
 		<span>Выберите специальность врача:</span><br>
-		<select>
+		<select class="specialization" name="specialization">
 			<?php foreach ($specializations as $specialization):?>
-				<option value="<?php echo $specialization->id?>"><?php echo $specialization->name?></option>
+				<option value="<?php echo $specialization->id?>" <?php echo $_GET['specialization'] == $specialization->id ? 'selected' : ''?>><?php echo $specialization->name?></option>
 			<?php endforeach;?>
 		</select>
 	</label>
 	
 	<label>
 		<span>Выберите дату:</span><br>
+		<?php ?>
 		<?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-		   'name' => 'date_start',
+		   'name' => 'date_search',
 		   'model' => $specializations,
-		   'attribute' => 'date_start',
+		   'attribute' => 'date_search',
 		   'language' => 'ru',
 		   'options' => array(
 		       'showAnim' => 'fold',
 		   ),
 		   'htmlOptions' => array(
-		       'class' => 'doctor_date'
+		   		'class' => 'date_search',
 		   ),
 		));?>
 	</label>
+	
+	<input type="submit" value="Показать">
 	
 	<?php $this->endWidget(); ?>
 </div>
