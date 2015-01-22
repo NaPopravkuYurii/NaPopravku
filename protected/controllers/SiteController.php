@@ -2,6 +2,21 @@
 
 class SiteController extends CController
 {
+	public function actionAppointment()
+	{
+		$appointment = new Appointment();
+		$appointment->id_doctor = $_REQUEST['doctor'];
+		$appointment->name = $_REQUEST['name'];
+		$appointment->phone = $_REQUEST['phone'];
+		$appointment->date = $_REQUEST['date'];
+		
+		if ($appointment->save())
+		{
+			$json = array('message' => 'Вы успешно записались к врачу.', 'id' => $appointment->id);
+			echo json_encode($json);
+		}
+	}
+	
 	public function actionIndex()
 	{
 		$doctors = false;
@@ -33,6 +48,7 @@ class SiteController extends CController
 					$free_count++;
 					$intervals[$i]['time'] = date('H:i', $i*60-(3*60*60));
 					$intervals[$i]['free'] = true;
+					$intervals[$i]['date'] = $date.' '.$intervals[$i]['time'].':00';
 					if (is_array($app[$doctor->id]))
 					{
 						foreach ($app[$doctor->id] as $appointment)

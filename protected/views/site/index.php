@@ -40,14 +40,18 @@ $this->pageTitle = 'Запись на приём';
 								<table>
 									<tr>
 										<td>Ф.И.О.:</td>
-										<td><input type="text" placeholder="Ф.И.О."></td>
+										<td>
+											<input class="a_name" type="text" placeholder="Ф.И.О.">
+											<input class="a_doctor" type="hidden" value="<?php echo $doctor->id?>">
+											<input class="a_date" type="hidden" value="<?php echo $appointment['date']?>">
+										</td>
 									</tr>
 									<tr>
 										<td>Телефон:</td>
-										<td><input type="text" placeholder="Телефон"></td>
+										<td><input class="a_phone" type="text" placeholder="Телефон"></td>
 									</tr>
 									<tr>
-										<td colspan="2"><input type="button" value="Записаться на приём"></td>
+										<td colspan="2"><input class="a_send" type="button" value="Записаться на приём"></td>
 									</tr>
 								</table>
 							</div>
